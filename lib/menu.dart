@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mental_health_tracker/moodentry_form.dart';
+import 'package:mental_health_tracker/widgets/left_drawer.dart';
 class MyHomePage extends StatelessWidget {
-    final String npm = '5000000000'; // NPM
-    final String name = 'Gedagedi Gedagedago'; // Nama
-    final String className = 'PBP S'; // Kelas
+    final String npm = '2306216075'; // NPM
+    final String name = 'Juan Lukius Barnaby'; // Nama
+    final String className = 'PBP F'; // Kelas
     MyHomePage({super.key});
      final List<ItemHomepage> items = [
          ItemHomepage("Lihat Mood", Icons.mood),
@@ -16,6 +18,8 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       // AppBar adalah bagian atas halaman yang menampilkan judul.
       appBar: AppBar(
+           iconTheme: const IconThemeData(color: Colors.white),
+
         // Judul aplikasi "Mental Health Tracker" dengan teks putih dan tebal.
         title: const Text(
           'Mental Health Tracker',
@@ -28,6 +32,8 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.primary,
       ),
       // Body halaman dengan padding di sekelilingnya.
+      drawer: const LeftDrawer(),
+
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         // Menyusun widget secara vertikal dalam sebuah kolom.
@@ -153,6 +159,10 @@ class ItemCard extends StatelessWidget {
             ..showSnackBar(
               SnackBar(content: Text("Kamu telah menekan tombol ${item.name}!"))
             );
+              if (item.name == "Tambah Mood") {
+                Navigator.push(context,MaterialPageRoute
+                (builder: (context) => const MoodEntryFormPage()));
+              }
         },
         // Container untuk menyimpan Icon dan Text
         child: Container(
