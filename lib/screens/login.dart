@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:provider/provider.dart';
 import 'package:toko_barang_gak_guna_mobile/screens/menu.dart';
 import 'package:toko_barang_gak_guna_mobile/screens/register.dart';
+=======
+import 'package:mental_health_tracker/screens/menu.dart';
+import 'package:flutter/material.dart';
+import 'package:mental_health_tracker/screens/register.dart';
+import 'package:pbp_django_auth/pbp_django_auth.dart';
+import 'package:provider/provider.dart';
+// TODO: Import halaman RegisterPage jika sudah dibuat
+
+>>>>>>> 905425b7d8846a7de936467968ad56d9663cb8ec
 void main() {
   runApp(const LoginApp());
 }

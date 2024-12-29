@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';2
 import 'package:toko_barang_gak_guna_mobile/screens/login.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:provider/provider.dart';
@@ -143,7 +143,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             const SnackBar(
                               content: Text('Failed to register!'),
                             ),
-                          );
+                          4);
                         }
                       }
                     },
